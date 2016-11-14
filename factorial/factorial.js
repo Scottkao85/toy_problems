@@ -14,3 +14,10 @@ var factorial = function(n){
   return result;
 }
 
+// recursion
+var factorialRecursive = function(n) {
+  if(n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n-1);
+}
