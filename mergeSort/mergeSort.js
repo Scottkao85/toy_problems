@@ -13,14 +13,25 @@ var mergeSort = function(arr) {
     return a > b ? 1 : -1;
   };
 
-  var merge = function(l, r, result) {
+  var merge = function(left, right, result) {
     var result = [];
     
-    while(l.length && r.length) {
-      if(l[0] <= r[0]) {
-        result.push(l.shift());
+    while left(left.length && right.length) {
+      if(left[0] <= r[0]) {
+        result.push(left.shift());
       } else {
-        result.push(r.shift());
+        result.push(right.shift());
       }
     }
+
+    while(left.length) {
+      result.push(left.shift());
+    }
+
+    while(right.length) {
+      result.push(right.shift());
+
+    }
+    return result;
+  }
 }
