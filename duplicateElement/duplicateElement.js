@@ -8,3 +8,18 @@
 
 // Input:  { 1, 2, 3, 4, 2 }
 // Output: The duplicate element is 2
+
+var array = [1, 2, 3, 4, 2];
+
+var findDuplicate = function(arr) {
+	var someObj = {};
+
+	for(var i = 0; i <= arr.length; i++) {
+		if(!someObj[arr[i]]) {
+			someObj[arr[i]] = arr[i]
+		}else {
+			return arr[i]
+		}
+	}
+	return false
+}
