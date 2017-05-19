@@ -15,20 +15,20 @@ var mergeSort = function(arr) {
 
   var merge = function(left, right, result) {
     var result = [];
-    
-    while left(left.length && right.length) {
-      if(left[0] <= r[0]) {
+
+    while(left.length && right.length) {
+      if(left[0] <= right[0]) {
         result.push(left.shift());
       } else {
         result.push(right.shift());
       }
     }
 
-    while(left.length) {
+    else if(left.length) {
       result.push(left.shift());
     }
 
-    while(right.length) {
+    else if(right.length) {
       result.push(right.shift());
 
     }
