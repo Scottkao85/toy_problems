@@ -5,3 +5,27 @@
 
 // For example:
 // ['a', 'b', 'c'] ----> [[], ['a'], ['b'], ['c'], ['a', 'b'], ['a', 'c'], ['b', 'c'], ['a', 'b', 'c']]
+
+
+var allCombo = fucntion(array) {
+  var result = [];
+
+  if(array.length === 0) {
+    result.push([]);
+
+    return result;
+  }
+
+  for(var i = 0; i < array.length; i++) {
+    result.push([array[i]]);
+    for(var j = i + 1; j < array.length; j++) {
+      result[i].push(array[i])
+    }
+  }
+
+  return result.concat(allCombo(array.slice))
+}
+
+
+var array = ['a', 'b', 'c']
+allCombo(array);
