@@ -23,7 +23,7 @@ var allCombo = fucntion(array) {
     }
   }
 
-  return result.concat(allCombo(array.slice))
+  return result.concat(allCombo(array.slice(0, -1))
 }
 
 
